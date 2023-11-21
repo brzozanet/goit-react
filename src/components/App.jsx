@@ -42,7 +42,7 @@ export class App extends Component {
         <ContactForm addContact={this.addContact} />
 
         <h2>Contacts</h2>
-        <Filter onChange={this.handleFilterChange} />
+        <Filter handleFilterChange={this.handleFilterChange} />
         <ContactList filteredContacts={filteredContacts} />
       </div>
     );
