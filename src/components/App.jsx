@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 export class App extends Component {
   state = {
     contacts: [],
+    filter: "",
     name: "",
     number: "",
   };
@@ -60,6 +61,12 @@ export class App extends Component {
           <button type="submit">Add contact</button>
         </form>
         <h2>Contacts</h2>
+        {/* <label>
+          Find contacts by name
+          <br />
+          <input type="text" name="filter" id="" />
+        </label>
+        <br /> */}
         <ul>
           {this.state.contacts.map(contact => (
             <li key={contact.id}>
