@@ -6,6 +6,7 @@ export class App extends Component {
   state = {
     contacts: [],
     name: "",
+    number: "",
   };
 
   addContact = event => {
@@ -13,6 +14,7 @@ export class App extends Component {
     const contact = {
       id: nanoid(),
       name: event.target.elements.name.value,
+      number: event.target.elements.number.value,
     };
 
     this.setState(prevState => ({
@@ -34,17 +36,35 @@ export class App extends Component {
               name="name"
               id=""
               placeholder="Contact name"
-              pattern="^[a-zA-Z]+(([' \u2013][a-zA-Z])?[a-zA-Z]*)*$"
-              title="Name may contain only letters, apostrophe, dash, and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              pattern="[A-Za-z\s']*"
+              title="Wprowadź tylko litery, spacje i apostrofy."
               required
             />
           </label>
+          <br />
+          <br />
+          <label>
+            Number: <br />
+            <input
+              type="tel"
+              name="number"
+              id=""
+              placeholder="Contact number"
+              pattern="[+]?[\d\s()-]*"
+              title="Wprowadź poprawny numer telefonu."
+              required
+            />
+          </label>
+          <br />
+          <br />
           <button type="submit">Add contact</button>
         </form>
         <h2>Contacts</h2>
         <ul>
           {this.state.contacts.map(contact => (
-            <li key={contact.id}>{contact.name}</li>
+            <li key={contact.id}>
+              {contact.name}: {contact.number}
+            </li>
           ))}
         </ul>
       </div>
