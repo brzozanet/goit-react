@@ -24,7 +24,7 @@ export const ContactForm = ({ addContact }) => {
           name="number"
           id=""
           placeholder="Contact number"
-          pattern="[+]?[\d\s()-]*"
+          pattern="[0-9]*"
           title="Wprowadź poprawny numer telefonu."
           required
         />
