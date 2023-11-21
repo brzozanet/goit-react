@@ -25,7 +25,15 @@ export class App extends Component {
     event.target.reset();
   };
 
+  handleFilterChange = event => {
+    this.setState({ filter: event.target.value });
+  };
+
   render() {
+    const filteredContacts = this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
+    );
+
     return (
       <div>
         <h2>Phonebook</h2>
@@ -61,14 +69,20 @@ export class App extends Component {
           <button type="submit">Add contact</button>
         </form>
         <h2>Contacts</h2>
-        {/* <label>
-          Find contacts by name
+        <label>
+          Find contacts by name:
           <br />
-          <input type="text" name="filter" id="" />
+          <input
+            type="text"
+            name="filter"
+            placeholder="Search name"
+            id=""
+            onChange={this.handleFilterChange}
+          />
         </label>
-        <br /> */}
+        <br />
         <ul>
-          {this.state.contacts.map(contact => (
+          {filteredContacts.map(contact => (
             <li key={contact.id}>
               {contact.name}: {contact.number}
             </li>
