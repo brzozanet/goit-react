@@ -1,0 +1,30 @@
+.Feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.Feedback__button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100px;
+}
+
+.Feedback__button:hover,
+.Feedback__button:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.Feedback__button:not(:last-child) {
+  margin-right: 5px;
+}
