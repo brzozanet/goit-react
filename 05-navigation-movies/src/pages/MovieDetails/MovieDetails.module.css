@@ -1,0 +1,15 @@
+.movie_container {
+  margin: 0px 40px;
+}
+
+.movie_title {
+  font-size: 36px;
+}
+
+.movie_subtitle {
+  font-size: 24px;
+}
+
+.movie_tagline {
+  font-style: italic;
+}

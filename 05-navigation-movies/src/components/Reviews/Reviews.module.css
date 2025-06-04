@@ -1,0 +1,15 @@
+.review_list {
+}
+
+.review_item {
+  list-style: none;
+}
+
+.review_author {
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.review_content {
+  margin-top: 0;
+}

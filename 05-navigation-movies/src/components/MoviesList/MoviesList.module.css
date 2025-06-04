@@ -1,0 +1,28 @@
+.movie_box {
+  border: 1px solid orange;
+  background-color: antiquewhite;
+  max-width: 400px;
+}
+
+.movies_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.movies_item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie_link {
+  text-decoration: none;
+}
+
+.movie_title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}

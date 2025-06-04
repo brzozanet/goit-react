@@ -1,0 +1,18 @@
+.search_container {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.search_input {
+  display: inline-block;
+  animation: cursorBlink 1s infinite;
+  font-size: 50px;
+  border-radius: 10px;
+  border-color: darkgray;
+  outline: none;
+  padding: 10px;
+  cursor: blink;
+}
