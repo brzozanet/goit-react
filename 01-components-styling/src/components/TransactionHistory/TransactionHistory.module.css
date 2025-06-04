@@ -1,0 +1,27 @@
+.transactionHistory {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tableHead {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 10px;
+}
+
+.tableItem {
+  padding: 10px 0;
+}
+
+.tableRow:nth-child(odd) {
+  background-color: #f4f6f6;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #eaecee;
+}
